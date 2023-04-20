@@ -48,6 +48,19 @@ struct Ehash {
 ////////////////////////////////////////////////////////////////////////////////
 int main()
 {
+  string fileName = "./ProcessRoot_g";
+
+  std::size_t pos = fileName.find("./");
+
+  if (pos == 0)
+  {
+    cout << "result: " << fileName.substr(2,fileName.length()) << endl;
+  }
+  else
+  {
+    cout << " Attention POS != 0" << endl;
+  }
+
   map<string,int> phone_book {
     {"David Fist",123321},
     {"Eva Sec",453432},
